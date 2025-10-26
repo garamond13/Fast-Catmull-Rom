@@ -1,7 +1,7 @@
 # Fast Catmull-Rom
 
 MPV user shader.  
-Fast Catmull-Rom aproximation using 5 samples by omitting corrners.
+Fast Catmull-Rom approximation using 5 samples by omitting corners.
 
 **FastCatmullRom_MAIN.glsl**  
 Hooks main texture and scales it to ouput resolution.
