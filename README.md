@@ -1,5 +1,4 @@
 # Fast Catmull-Rom
-
 MPV user shader.  
 Fast Catmull-Rom approximation using 5 samples by omitting corners.
 

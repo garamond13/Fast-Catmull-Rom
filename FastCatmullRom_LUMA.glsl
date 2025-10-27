@@ -31,14 +31,14 @@ vec4 hook()
 	const float w3w12 = w3.x * w12.y;
 	const float w12w3 = w12.x * w3.y;
 
-	vec3 c = HOOKED_tex(vec2(tc12.x, tc0.y)).rgb * w12w0;
-	c += HOOKED_tex(vec2(tc0.x, tc12.y)).rgb * w0w12;
-	c += HOOKED_tex(tc12).rgb * w12w12;
-	c += HOOKED_tex(vec2(tc3.x, tc12.y)).rgb * w3w12;
-	c += HOOKED_tex(vec2(tc12.x, tc3.y)).rgb * w12w3;
+	float c = HOOKED_tex(vec2(tc12.x, tc0.y)).x * w12w0;
+	c += HOOKED_tex(vec2(tc0.x, tc12.y)).x * w0w12;
+	c += HOOKED_tex(tc12).x * w12w12;
+	c += HOOKED_tex(vec2(tc3.x, tc12.y)).x * w3w12;
+	c += HOOKED_tex(vec2(tc12.x, tc3.y)).x * w12w3;
 
 	// Normalize.
 	c /= w12w0 + w0w12 + w12w12 + w3w12 + w12w3;
 
-	return vec4(c, 1.0);
+	return vec4(c, 0.0, 0.0, 0.0);
 }
